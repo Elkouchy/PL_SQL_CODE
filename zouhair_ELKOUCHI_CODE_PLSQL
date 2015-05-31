@@ -1,0 +1,19 @@
+SET SERVEROUTPUT ON 
+DECLARE
+x VARCHAR2;
+y VARCHAR2;
+		PROCEDURE Affecher(str in VARCHAR2) is
+		BEGIN
+		DBMS_output.PUT_LINE(str);
+		END Affecher;
+BEGIN
+x:='zouhair';
+y:='yassine';
+	IF x=y THEN
+	   Afficher('equals');
+	ELSE 
+	   Afficher('Differents');
+	END if;
+Afficher("x"||LENGTH(x));Afficher("y"||LENGTH(y));
+END;
+/
